@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2018/2 | 
+            Markdown语法 | 
         
         斯是陋室，惟吾德馨
     </title>
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="斯是陋室，惟吾德馨">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2018/02/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/12/Python元组/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="斯是陋室，惟吾德馨">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/2018/02/">
+    <meta property="og:url" content="http://yoursite.com/2018/02/12/Python元组/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018/2 | 斯是陋室，惟吾德馨">
+    <meta property="og:title" content="Markdown语法 | 斯是陋室，惟吾德馨">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Mon Feb 12 2018 23:06:06 GMT+0800">
+        <meta property="article:modified_time" content="Mon Feb 12 2018 23:06:28 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2018/02/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/02/12/Python元组/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/02/12/Python元组/index.html",
+    "headline": "Markdown语法",
+    "datePublished": "Mon Feb 12 2018 23:06:06 GMT+0800",
+    "dateModified": "Mon Feb 12 2018 23:06:28 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "JZen",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "噢！欢迎，我的老伙计！"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "斯是陋室，惟吾德馨",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,285 +319,256 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python元组"><span class="post-toc-number">1.</span> <span class="post-toc-text">Python元组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#元组拆包"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">元组拆包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在方法返回值中使用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">在方法返回值中使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于-号的用法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">关于*号的用法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具名元组"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">具名元组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码解释"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">代码解释</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/12/Python元组/">Markdown语法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/12/Python元组/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="JZen's avatar">
-            </div>
-            <div>
-                <strong>JZen</strong>
-                <span>2月 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span id = "sourceId::2018/02/12/Python元组/" class = "cy_cmt_count" ></span>条评论
-                </span>
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/12/特殊方法/">Markdown语法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            简介魔术方法（ma...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/12/特殊方法/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="JZen's avatar">
-            </div>
-            <div>
-                <strong>JZen</strong>
-                <span>2月 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span id = "sourceId::2018/02/12/特殊方法/" class = "cy_cmt_count" ></span>条评论
-                </span>
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/08/Markdown语法/">Markdown语法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/08/Markdown语法/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="JZen's avatar">
-            </div>
-            <div>
-                <strong>JZen</strong>
-                <span>2月 08, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span id = "sourceId::2018/02/08/Markdown语法/" class = "cy_cmt_count" ></span>条评论
-                </span>
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/07/第一篇博客/">第一篇博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本博客基于 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/07/第一篇博客/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="JZen's avatar">
-            </div>
-            <div>
-                <strong>JZen</strong>
-                <span>2月 07, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span id = "sourceId::2018/02/07/第一篇博客/" class = "cy_cmt_count" ></span>条评论
-                </span>
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Markdown语法
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>JZen</strong>
+        <span>2月 12, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Markdown语法&url=http://yoursite.com/2018/02/12/Python元组/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Markdown语法&url=http://yoursite.com/2018/02/12/Python元组/index.html&via=JZen" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/12/Python元组/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=斯是陋室，惟吾德馨&title=Markdown语法&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/02/12/Python元组/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Python元组"><a href="#Python元组" class="headerlink" title="Python元组"></a>Python元组</h1><p>Python元组是对数据的记录：元组中的每个元素都存放了记录中一个字段的数据，外加这个字段的位置。正是这个位置信息给数据赋予了意义。</p>
+<p>下面看一段代码就能很直观的看到元组的使用和意义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>nums = (<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>name, age = (<span class="string">'JZen'</span>, <span class="number">20</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>persons = [(<span class="string">'Jack'</span>, <span class="number">23</span>), (<span class="string">'Mary'</span>, <span class="number">22</span>), (<span class="string">'Tom'</span>, <span class="number">20</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> p <span class="keyword">in</span> sorted(persons):</span><br><span class="line">··· 	print(<span class="string">'name:%s, age:%d'</span> % p)</span><br><span class="line">···</span><br><span class="line">name:Jack, age:<span class="number">23</span></span><br><span class="line">name:Mary, age:<span class="number">22</span></span><br><span class="line">name:Tom, age:<span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> name, _ <span class="keyword">in</span> persons:</span><br><span class="line">··· 	print(name)</span><br><span class="line">···</span><br><span class="line">Jack</span><br><span class="line">Mary</span><br><span class="line">Tom</span><br></pre></td></tr></table></figure>
+<h2 id="元组拆包"><a href="#元组拆包" class="headerlink" title="元组拆包"></a>元组拆包</h2><p>元组拆包的形式就是平行赋值，少废话，看代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>nums = (<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>one, two = nums</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>one</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>two</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>另外，还有一种很优雅的写法，当你要交换两个变量的值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure>
+<p>可以用下滑线替换不需要的值</p>
+<h2 id="在方法返回值中使用"><a href="#在方法返回值中使用" class="headerlink" title="在方法返回值中使用"></a>在方法返回值中使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate</span><span class="params">(a, b)</span></span></span><br><span class="line">	return a+b, a*b</span><br><span class="line"></span><br><span class="line">sum, mul = calculate(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># sum = 5, mul = 6</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于-号的用法"><a href="#关于-号的用法" class="headerlink" title="关于*号的用法"></a>关于*号的用法</h2><p>可以用 * 运算符把一个可迭代对象拆开作为函数的参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>divmod(<span class="number">20</span>, <span class="number">8</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="number">4</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">20</span>, <span class="number">8</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>divmod(*t)</span><br><span class="line">(<span class="number">2</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>用*来处理剩下的元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, *rest = range(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, rest</span><br><span class="line">(<span class="number">0</span>, <span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, *rest = range(<span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, rest</span><br><span class="line">(<span class="number">0</span>, <span class="number">1</span>, [])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, *rest, b = range(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, rest</span><br><span class="line">(<span class="number">0</span>, <span class="number">4</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>*号只能用在变量名的前面</p>
+<h2 id="具名元组"><a href="#具名元组" class="headerlink" title="具名元组"></a>具名元组</h2><p>顾名思义，就是带有名字的元组，这里的名字是指<code>name</code>或者<code>key</code></p>
+<p>具体是使用<code>collections.namedtuple</code>函数。他是一个工厂函数，用来构建一个带有字段名的元组和一个有名字的类。调试程序的时候会很舒服。</p>
+<p>使用之前先import</p>
+<p><code>from collections import namedtuple</code></p>
+<p>然后看下面例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Person = namedtuple(&apos;Person&apos;, &apos;name age gender&apos;)</span><br><span class="line">&gt;&gt;&gt; JZen = Person(&apos;JZen&apos;, 20, &apos;male&apos;)</span><br><span class="line">&gt;&gt;&gt; JZen</span><br><span class="line">Person(name=&apos;JZen&apos;, age=20, gender=&apos;male&apos;)</span><br><span class="line">&gt;&gt;&gt; JZen.name</span><br><span class="line">&apos;JZen&apos;</span><br><span class="line">&gt;&gt;&gt; JZen[1]</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+<p>这样看一遍我想应该都明白了吧。主要是<code>namedtuple</code>方法里面的两个参数，第一个参数是<code>typename</code>，这个可以取一个比较好认的名字，这取决于你自己。重点是第二个参数，可以是一段字符串，也可以是一个包含字符串的可迭代集合，比如上面那行可以写成这样：</p>
+<p><code>namedtuple(&#39;Person&#39;, [&#39;name&#39;, &#39;age&#39;, &#39;gender&#39;])</code></p>
+<p>除了从普通元组继承来的属性之外，具名元组还有一些自己专有的属性。下面展示几个最有用的：<code>_fields</code>类属性、类方法<code>_make(iterable)</code>和实例方法<code>_asdict()</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Person._fields</span><br><span class="line">(&apos;name&apos;, &apos;age&apos;, &apos;gender&apos;)</span><br><span class="line">&gt;&gt;&gt; jack_info = (&apos;Jack&apos;, 18, &apos;male&apos;)</span><br><span class="line">&gt;&gt;&gt; Jack = Person._make(jack_info)</span><br><span class="line">&gt;&gt;&gt; Jack._asdict()</span><br><span class="line">OrderedDict([(&apos;name&apos;, &apos;Jack&apos;), (&apos;age&apos;, 18), (&apos;gender&apos;, &apos;male&apos;)])</span><br><span class="line">&gt;&gt;&gt; for key, value in Jack._asdict().items():</span><br><span class="line">	print(key, &apos;:&apos;, value)</span><br><span class="line">	</span><br><span class="line">name : Jack</span><br><span class="line">age : 18</span><br><span class="line">gender : male</span><br></pre></td></tr></table></figure>
+<h4 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h4><p><code>_fields</code>：包含着这个元组的所有字段名称的属性</p>
+<p><code>_make(jack_info)</code>：和<code>Person(*jack_info)</code>作用一样。</p>
+<p><code>_asdict()</code>：把具名元组以<code>collections.OrderedDict</code>的形式返回，利用它我们可以友好地将元组的信息呈现出来。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/02/12/Python元组/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytso6Rta';
+var conf = 'prod_be061db5502784373ca63f9e235ac373';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/12/特殊方法/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
