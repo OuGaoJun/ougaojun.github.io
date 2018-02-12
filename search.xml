@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[Markdown语法]]></title>
+      <title><![CDATA[Python元组详解]]></title>
       <url>/2018/02/12/Python%E5%85%83%E7%BB%84/</url>
       <content type="html"><![CDATA[<h1 id="Python元组"><a href="#Python元组" class="headerlink" title="Python元组"></a>Python元组</h1><p>Python元组是对数据的记录：元组中的每个元素都存放了记录中一个字段的数据，外加这个字段的位置。正是这个位置信息给数据赋予了意义。</p>
 <p>下面看一段代码就能很直观的看到元组的使用和意义。</p>
@@ -38,7 +38,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Markdown语法]]></title>
+      <title><![CDATA[Python特殊方法]]></title>
       <url>/2018/02/12/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/</url>
       <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>魔术方法（magic method）是特殊方法的昵称，在Python中的特殊方法，一般都是使用诸如<code>__xxx__</code>（前后两个下划线，中间是方法名）的命名方式，在书里有个名词也可以形容它，比如<code>__getitem__</code>，叫做“双下—getitem” (dunnder-getitem)</p>
 <h2 id="万事开头难"><a href="#万事开头难" class="headerlink" title="万事开头难"></a>万事开头难</h2><p>难以用概念去概括Python特殊方法的作用，最简单的方法就是用例子说明。</p>
