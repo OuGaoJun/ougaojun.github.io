@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Mon Feb 12 2018 23:00:05 GMT+0800">
-        <meta property="article:modified_time" content="Mon Feb 12 2018 23:50:41 GMT+0800">
+        <meta property="article:modified_time" content="Mon Feb 12 2018 23:53:00 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/02/12/特殊方法/index.html",
     "headline": "Python特殊方法",
     "datePublished": "Mon Feb 12 2018 23:00:05 GMT+0800",
-    "dateModified": "Mon Feb 12 2018 23:50:41 GMT+0800",
+    "dateModified": "Mon Feb 12 2018 23:53:00 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "JZen",
@@ -497,7 +497,7 @@
 <h4 id="迭代操作"><a href="#迭代操作" class="headerlink" title="迭代操作"></a>迭代操作</h4><p>另外，仅仅实现了<code>__getitem__</code>方法，那么也变成了可迭代的了：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for card in deck: # 反向迭代也可以 reversed(deck)</span><br><span class="line">	print(card)</span><br><span class="line"></span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;spades&apos;)</span><br><span class="line">Card(rank=&apos;3&apos;, suit=&apos;spades&apos;)</span><br><span class="line">Card(rank=&apos;4&apos;, suit=&apos;spades&apos;)</span><br><span class="line">···</span><br><span class="line">Card(rank=&apos;Q&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;K&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;diamonds&apos;)</span><br></pre></td></tr></table></figure>
 <h4 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h4><p>如果一个集合没有实现<code>__contains__</code>方法，那么<code>in</code>运算符会按顺序做一次迭代搜索。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>Card(<span class="string">'A'</span>, <span class="string">'hearts'</span>) <span class="keyword">in</span> deck</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Card(<span class="string">'B'</span>, <span class="string">'hearts'</span>) <span class="keyword">in</span> deck</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Card(&apos;A&apos;, &apos;hearts&apos;) in deck</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; Card(&apos;B&apos;, &apos;hearts&apos;) in deck</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
 <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p>按照扑克牌的大小，2最小，A最大，同时要加上花色的大小判定，从大到小排序：黑桃、红桃、梅花、方块。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">suit_values = dict(spades = <span class="number">3</span>, hearts = <span class="number">2</span>, clubs = <span class="number">1</span>, diamonds = <span class="number">0</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">spades_high</span><span class="params">(card)</span>:</span></span><br><span class="line">	rank_value = FrenchDeck.ranks.index (card.rank)</span><br><span class="line">	<span class="keyword">return</span> rank_value * len(suit_values) + suit_values[card.suit]</span><br></pre></td></tr></table></figure>
 <p>运行</p>
