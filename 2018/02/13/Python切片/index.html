@@ -45,7 +45,7 @@
     
     <title>
         
-            关于我 | 
+            Python特殊方法 | 
         
         斯是陋室，惟吾德馨
     </title>
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="斯是陋室，惟吾德馨">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/13/Python切片/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="斯是陋室，惟吾德馨">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/02/13/Python切片/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="关于我 | 斯是陋室，惟吾德馨">
+    <meta property="og:title" content="Python特殊方法 | 斯是陋室，惟吾德馨">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Tue Feb 13 2018 00:19:22 GMT+0800">
+        <meta property="article:modified_time" content="Tue Feb 13 2018 00:19:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/02/13/Python切片/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/02/13/Python切片/index.html",
+    "headline": "Python特殊方法",
+    "datePublished": "Tue Feb 13 2018 00:19:22 GMT+0800",
+    "dateModified": "Tue Feb 13 2018 00:19:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "JZen",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "噢！欢迎，我的老伙计！"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "斯是陋室，惟吾德馨",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -288,6 +321,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#切片操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">切片操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单一点的切片"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简单一点的切片</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#难一点的切片"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">难一点的切片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码解释"><span class="post-toc-number">1.2.0.1.</span> <span class="post-toc-text">代码解释</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给切片赋值"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">给切片赋值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码解释-1"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">代码解释</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多维切片和省略"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">多维切片和省略</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -314,7 +380,7 @@
         
     
             <p class="article-headline-p">
-                关于我
+                Python特殊方法
             </p>
         </div>
 
@@ -333,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>JZen</strong>
-        <span>2月 08, 2018</span>
+        <span>2月 13, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -365,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于我&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python特殊方法&url=http://yoursite.com/2018/02/13/Python切片/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -374,7 +440,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于我&url=http://yoursite.com/about/index.html&via=JZen" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python特殊方法&url=http://yoursite.com/2018/02/13/Python切片/index.html&via=JZen" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -383,7 +449,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/13/Python切片/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -398,7 +464,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=斯是陋室，惟吾德馨&title=关于我&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=斯是陋室，惟吾德馨&title=Python特殊方法&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/02/13/Python切片/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -417,13 +483,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>一名普通的大学生，从初中开始喜欢编程，比较常玩的是C#用于写Windows应用程序，Java用于写Android应用程序，Python用于爬虫和机器学习。</p>
-<p>打死都不做网站（前后端）。</p>
-<p>偶尔还玩一下逆向，还有物联网。</p>
-<p>但有我在的地方从不会安静，因为我的青轴键盘能打破一切岑寂。</p>
-<p>默默等死中…</p>
-<p>QQ：1920363953</p>
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5ykv2ila720&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=1" async="async"></script>
+        <h1 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h1><p>每个Python程序员都知道像列表（list）、元组（tuple）和字符串（str）这类序列类型都支持切片操作，但实际上的切片操作比人们所想象的要强大的多。</p>
+<h2 id="简单一点的切片"><a href="#简单一点的切片" class="headerlink" title="简单一点的切片"></a>简单一点的切片</h2><p>少废话，上例子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>n = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>n[:<span class="number">2</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>n[<span class="number">2</span>:]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>n[<span class="number">2</span>:<span class="number">4</span>]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>n[<span class="number">2</span>:<span class="number">-2</span>]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+<p>我想应该不用做过多的解释。</p>
+<h2 id="难一点的切片"><a href="#难一点的切片" class="headerlink" title="难一点的切片"></a>难一点的切片</h2><p>我们还可以使用<code>s[a:b:c]</code>形式的操作，对s在a和b之间以c为间隔取值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">'tensorflow'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s[::<span class="number">3</span>]</span><br><span class="line"><span class="string">'tsfw'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s[::<span class="number">-1</span>]</span><br><span class="line"><span class="string">'wolfrosnet'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s[<span class="number">2</span>:<span class="number">-2</span>:<span class="number">2</span>]</span><br><span class="line"><span class="string">'nof'</span></span><br></pre></td></tr></table></figure>
+<h4 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h4><p><code>s[::3]</code>：这里的<code>3</code>是间隔，也就是步长，每隔3个数取一个值。</p>
+<p><code>s[::-1]</code>：每隔-1个数取一个值，也就是倒着取值。</p>
+<p><code>s[2:-2:2]</code>：从2的位置到倒数第2个位置以每隔2个位置取一个值。</p>
+<h2 id="给切片赋值"><a href="#给切片赋值" class="headerlink" title="给切片赋值"></a>给切片赋值</h2><p>先看代码实例。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>l = list(range(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l[<span class="number">2</span>:<span class="number">5</span>] = [<span class="number">20</span>, <span class="number">30</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> l[<span class="number">5</span>:<span class="number">7</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l[<span class="number">2</span>::<span class="number">2</span>] = [<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">11</span>, <span class="number">30</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">33</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l[<span class="number">1</span>:<span class="number">3</span>]=<span class="number">10</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#73&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    l[<span class="number">1</span>:<span class="number">3</span>]=<span class="number">10</span></span><br><span class="line">TypeError: can only assign an iterable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l[<span class="number">1</span>:<span class="number">3</span>]=[<span class="number">10</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l</span><br><span class="line">[<span class="number">0</span>, <span class="number">10</span>, <span class="number">30</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">33</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="代码解释-1"><a href="#代码解释-1" class="headerlink" title="代码解释"></a>代码解释</h4><p><code>l[2::2]= [11, 22, 33]</code>：这里只能赋值3个数，不能多也不能少，因为起始和间隔都是固定死的。</p>
+<p><code>l[1:3]=10</code>：这样会报错。如果赋值对象是一个切片，那么右侧就必须是个可迭代对象，即使只有一个值。</p>
+<h2 id="多维切片和省略"><a href="#多维切片和省略" class="headerlink" title="多维切片和省略"></a>多维切片和省略</h2><p>在NumPy外部库，二维的<code>numpy.ndarray</code>可以使用<code>a[i, j]</code>这样的是形式来获取值，抑或是用a[m:n, k:l]的方式来得到二维切片。</p>
+<p>省略号（…）正确书写时三个英文句号。在Python解析器里是一个符号，而实际它是<code>Ellipsis</code>对象的别名，这些无关紧要，重要的是它的用法还有作用。但在这一节里，还不属于Python自带库的用法，我会单独开一个关于<code>NumPy</code>切片的贴来写说明这一切。</p>
+<p>链接：<u><em>未完待续</em></u></p>
+
         
     
 
@@ -439,7 +515,7 @@
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="about/index.html"  ></div>
+<div id="SOHUCS" sid="2018/02/13/Python切片/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cytso6Rta';
@@ -468,6 +544,14 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/02/12/Python元组/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -629,6 +713,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
