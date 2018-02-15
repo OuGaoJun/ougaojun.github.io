@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Thu Feb 15 2018 08:58:10 GMT+0800">
-        <meta property="article:modified_time" content="Thu Feb 15 2018 08:58:35 GMT+0800">
+        <meta property="article:modified_time" content="Thu Feb 15 2018 09:01:27 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/02/15/Python列表推导/index.html",
     "headline": "Python列表推导",
     "datePublished": "Thu Feb 15 2018 08:58:10 GMT+0800",
-    "dateModified": "Thu Feb 15 2018 08:58:35 GMT+0800",
+    "dateModified": "Thu Feb 15 2018 09:01:27 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "JZen",
@@ -494,12 +494,12 @@
     
         <h1 id="列表推导"><a href="#列表推导" class="headerlink" title="列表推导"></a>列表推导</h1><p>列表推导是Python中一个非常好用的特性，而且看起来也非常易懂，在很多时候都可以用来替代传统的<code>for</code>循环。</p>
 <h2 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h2><p>将一段字符串转为ASCII编码形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; chars = &apos;ABC&apos;</span><br><span class="line">&gt;&gt;&gt; codes=[]</span><br><span class="line">&gt;&gt;&gt; for c in chars:</span><br><span class="line">		codes.append(ord(c))</span><br><span class="line">&gt;&gt;&gt; codes</span><br><span class="line">[65, 66, 67]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; chars = &apos;ABC&apos;</span><br><span class="line">&gt;&gt;&gt; codes=[]</span><br><span class="line">&gt;&gt;&gt; for c in chars:</span><br><span class="line">	codes.append(ord(c))</span><br><span class="line">&gt;&gt;&gt; codes</span><br><span class="line">[65, 66, 67]</span><br></pre></td></tr></table></figure>
 <p>这个例子非常简单，看起来也很清晰，但是，做这么一件简单的事却要花4行代码来解决。使用列表推导的方式两行代码就能搞定。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; chars = &apos;ABC&apos;</span><br><span class="line">&gt;&gt;&gt; codes = [ord(c) for c in chars]</span><br><span class="line">&gt;&gt;&gt; codes</span><br><span class="line">[65, 66, 67]</span><br></pre></td></tr></table></figure>
 <p>看起来非常的简洁，它其实就是<code>for</code>循环的一种简写，能够完全替代一些简单的<code>for</code>语句，起到更简洁的作用。但如果列表推导里面的代码超过两行，那么就要考虑用<code>for</code>来替换了，因为会导致代码可读性降低，造成维护困难。</p>
 <h2 id="复杂一点的例子"><a href="#复杂一点的例子" class="headerlink" title="复杂一点的例子"></a>复杂一点的例子</h2><p>在 <a href="http://ougaojun.com/2018/02/12/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">Python特殊方法</a> 里面的一个例子，有这么一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self._cards = [Card(rank, suit) for suit in self.suits</span><br><span class="line">   							    for rank in self.ranks]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self._cards = [Card(rank, suit) for suit in self.suits</span><br><span class="line">   					for rank in self.ranks]</span><br></pre></td></tr></table></figure>
 <p>就用到了嵌套的列表推导，在这里，可读性依然很强，因为这里的<code>suit</code>和<code>rank</code>是属于同一个对象的两个属性，不会造成错乱的感觉。</p>
 <h2 id="列表推导的变量泄露问题"><a href="#列表推导的变量泄露问题" class="headerlink" title="列表推导的变量泄露问题"></a>列表推导的变量泄露问题</h2><p>在<code>Python2</code>中，列表推导中<code>for</code>关键词之后的赋值操作可能会影响上下文的同名变量，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Python 2.7.10 (default, Jul 15 2017, 17:16:57) </span><br><span class="line">[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; x = &apos;example&apos;</span><br><span class="line">&gt;&gt;&gt; test = [x for x in &apos;ABC&apos;]</span><br><span class="line">&gt;&gt;&gt; x</span><br><span class="line">&apos;C&apos;</span><br></pre></td></tr></table></figure>
