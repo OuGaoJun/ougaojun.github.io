@@ -15,6 +15,18 @@
 <p><img src="/2018/02/15/Python内置序列类型/序列继承关系.jpg" alt=""></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -39,6 +51,18 @@
 <p>链接：<u><em>未完待续</em></u></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -74,6 +98,18 @@
 <p><code>_asdict()</code>：把具名元组以<code>collections.OrderedDict</code>的形式返回，利用它我们可以友好地将元组的信息呈现出来。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -100,6 +136,18 @@
 <p>运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for card in sorted(deck, key = spades_high):</span><br><span class="line">	print(card)</span><br><span class="line"></span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;clubs&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;hearts&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;spades&apos;)</span><br><span class="line">···</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;clubs&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;hearts&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;spades&apos;)</span><br></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -201,6 +249,18 @@
 <p>2017.11.22：修复一个错误，删除线不支持，用 <code>&lt;s&gt;&lt;/s&gt;</code> 代替。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 科普 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
         
     </entry>
     
