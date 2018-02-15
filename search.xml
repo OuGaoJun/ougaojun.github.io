@@ -3,6 +3,22 @@
   
     
     <entry>
+      <title><![CDATA[Python内置序列类型]]></title>
+      <url>/2018/02/15/Python%E5%86%85%E7%BD%AE%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h1 id="内置序列类型"><a href="#内置序列类型" class="headerlink" title="内置序列类型"></a>内置序列类型</h1><p>按照类型划分Python里面的序列，可分为<strong>容器序列</strong>和<strong>扁平序列</strong></p>
+<h4 id="容器序列"><a href="#容器序列" class="headerlink" title="容器序列"></a>容器序列</h4><p><code>list</code>、<code>tuple</code> 和 <code>collections.deque</code> 这些序列能存放不同类型的数据。</p>
+<h4 id="扁平序列"><a href="#扁平序列" class="headerlink" title="扁平序列"></a>扁平序列</h4><p><code>str</code>、<code>bytes</code>、<code>bytearray</code>、<code>memoryview</code> 和 <code>array.array</code>，这类序列只能容纳一种类型。</p>
+<p>容器序列存放的是它们所包含的任意类型的对象的引用，而扁平序列里存放的是值而不是引用。换句话说，扁平序列其实是一段连续的内存空间。由此可见扁平序列其实更加紧凑，但是它里面只能存放诸如字符、字节和数值这种基础类型。</p>
+<h5 id="序列类型还能按照能否被修改来分类。"><a href="#序列类型还能按照能否被修改来分类。" class="headerlink" title="序列类型还能按照能否被修改来分类。"></a>序列类型还能按照能否被修改来分类。</h5><h4 id="可变序列"><a href="#可变序列" class="headerlink" title="可变序列"></a>可变序列</h4><p><code>list</code>、<code>bytearray</code>、<code>array.array</code>、<code>collections.deque</code> 和 <code>memoryview</code>。</p>
+<h4 id="不可变序列"><a href="#不可变序列" class="headerlink" title="不可变序列"></a>不可变序列</h4><p><code>tuple</code>、<code>str</code> 和 <code>bytes</code>。</p>
+<p>下图显示了可变序列（MutableSequence）和不可变序列（Sequence）的差异，同时也能看出前者从后者那里继承了一些方法。虽然内置的序列类型并不是直接从 Sequence 和 MutableSequence 这两个抽象基类（Abstract Base Class，ABC）继承而来的，但是了解这些基类可以帮助我们总结出那些完整的序列类型包含了哪些功能。</p>
+<p><img src="/2018/02/15/Python内置序列类型/序列继承关系.jpg" alt=""></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python切片操作]]></title>
       <url>/2018/02/13/Python%E5%88%87%E7%89%87/</url>
       <content type="html"><![CDATA[<h1 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h1><p>每个Python程序员都知道像列表（list）、元组（tuple）和字符串（str）这类序列类型都支持切片操作，但实际上的切片操作比人们所想象的要强大的多。</p>
