@@ -45,7 +45,7 @@
     
     <title>
         
-            Python特殊方法 | 
+            Python对序列使用+和*以及一个陷阱 | 
         
         斯是陋室，惟吾德馨
     </title>
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="斯是陋室，惟吾德馨">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/12/特殊方法/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/03/Python对序列使用-和*/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="斯是陋室，惟吾德馨">
@@ -232,16 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/02/12/特殊方法/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/03/Python对序列使用-和*/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Python特殊方法 | 斯是陋室，惟吾德馨">
+    <meta property="og:title" content="Python对序列使用+和*以及一个陷阱 | 斯是陋室，惟吾德馨">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Mon Feb 12 2018 23:00:05 GMT+0800">
-        <meta property="article:modified_time" content="Thu Feb 15 2018 08:54:50 GMT+0800">
+        <meta property="article:published_time" content="Sat Mar 03 2018 16:37:31 GMT+0800">
+        <meta property="article:modified_time" content="Sat Mar 03 2018 17:10:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,7 +249,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/02/12/特殊方法/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -261,10 +261,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/02/12/特殊方法/index.html",
-    "headline": "Python特殊方法",
-    "datePublished": "Mon Feb 12 2018 23:00:05 GMT+0800",
-    "dateModified": "Thu Feb 15 2018 08:54:50 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html",
+    "headline": "Python对序列使用+和*以及一个陷阱",
+    "datePublished": "Sat Mar 03 2018 16:37:31 GMT+0800",
+    "dateModified": "Sat Mar 03 2018 17:10:18 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "JZen",
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#万事开头难"><span class="post-toc-number">2.</span> <span class="post-toc-text">万事开头难</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一个完整的例子"><span class="post-toc-number">3.</span> <span class="post-toc-text">一个完整的例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#运行"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">运行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#随机抽牌"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">随机抽牌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#切片操作"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">切片操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#迭代操作"><span class="post-toc-number">3.0.5.</span> <span class="post-toc-text">迭代操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#in运算符"><span class="post-toc-number">3.0.6.</span> <span class="post-toc-text">in运算符</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#排序"><span class="post-toc-number">3.0.7.</span> <span class="post-toc-text">排序</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对序列使用-和"><span class="post-toc-number">1.</span> <span class="post-toc-text">对序列使用+和*</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码解析"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">代码解析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码解析-1"><span class="post-toc-number">1.0.0.3.</span> <span class="post-toc-text">代码解析</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对于错误的理解"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">对于错误的理解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-1"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-2"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">代码</span></a></li></ol></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -380,7 +380,7 @@
         
     
             <p class="article-headline-p">
-                Python特殊方法
+                Python对序列使用+和*以及一个陷阱
             </p>
         </div>
 
@@ -399,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>JZen</strong>
-        <span>2月 12, 2018</span>
+        <span>3月 03, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python特殊方法&url=http://yoursite.com/2018/02/12/特殊方法/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python对序列使用+和*以及一个陷阱&url=http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -449,7 +449,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python特殊方法&url=http://yoursite.com/2018/02/12/特殊方法/index.html&via=JZen" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python对序列使用+和*以及一个陷阱&url=http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html&via=JZen" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/12/特殊方法/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -473,7 +473,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=斯是陋室，惟吾德馨&title=Python特殊方法&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/02/12/特殊方法/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=斯是陋室，惟吾德馨&title=Python对序列使用+和*以及一个陷阱&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/03/Python对序列使用-和*/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -492,25 +492,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>魔术方法（magic method）是特殊方法的昵称，在Python中的特殊方法，一般都是使用诸如<code>__xxx__</code>（前后两个下划线，中间是方法名）的命名方式，在书里有个名词也可以形容它，比如<code>__getitem__</code>，叫做“双下—getitem” (dunnder-getitem)</p>
-<h2 id="万事开头难"><a href="#万事开头难" class="headerlink" title="万事开头难"></a>万事开头难</h2><p>难以用概念去概括Python特殊方法的作用，最简单的方法就是用例子说明。</p>
-<p>很多人都会选择使用Python作为快速开发工具，而特殊方法是属于“快速”这个性质。</p>
-<p>在Python中，要拿到一个集合的某个元素，可以使用对应的引索进行取值，比如<code>list[key]</code>，这背后利用的是<code>__getitem__</code>方法，为了拿到<code>my_list[key]</code>的值，解释器实际上会调用<code>my_list.__getitem__(key)</code>。</p>
-<p>Python也是面向对象编程语言，对于求一个集合的长度使用<code>len(list)</code>而不是<code>list.len()</code>会感觉有点奇怪，背后就是特殊方法的作用，调用了<code>list.__len__()</code>方法，和面向对象完全符合，而且还起到简化的作用，变得更加通俗易懂。</p>
-<h2 id="一个完整的例子"><a href="#一个完整的例子" class="headerlink" title="一个完整的例子"></a>一个完整的例子</h2><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line">Card = collections.namedtuple(<span class="string">'Card'</span>,[<span class="string">'rank'</span>, <span class="string">'suit'</span>])   <span class="comment"># 具名元组</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FrenchDeck</span>:</span></span><br><span class="line">    ranks = [str(n) <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">2</span>,<span class="number">11</span>)] + list(<span class="string">'JQKA'</span>)  <span class="comment"># 牌数 </span></span><br><span class="line">    suits = <span class="string">'spades hearts clubs diamonds'</span>.split()        <span class="comment"># 牌色</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span>                            <span class="comment"># 初始化（构造函数）</span></span><br><span class="line">        self._cards = [Card(rank, suit) <span class="keyword">for</span> suit <span class="keyword">in</span> self.suits</span><br><span class="line">                                        <span class="keyword">for</span> rank <span class="keyword">in</span> self.ranks]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span>                             <span class="comment"># 用len取长度的特殊方法</span></span><br><span class="line">        <span class="keyword">return</span> len(self._cards)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, position)</span>:</span>               <span class="comment"># 用引索取值的特殊方法</span></span><br><span class="line">        <span class="keyword">return</span> self._cards[position]</span><br></pre></td></tr></table></figure>
-<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; deck = FrenchDeck()</span><br><span class="line">&gt;&gt;&gt; len(deck)</span><br><span class="line">52</span><br><span class="line">&gt;&gt;&gt; deck[0]</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;spades&apos;)</span><br></pre></td></tr></table></figure>
-<h4 id="随机抽牌"><a href="#随机抽牌" class="headerlink" title="随机抽牌"></a>随机抽牌</h4><p>那么我们可以使用random模块里面的一个方法随机抽取一张牌</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from random import choice</span><br><span class="line">&gt;&gt;&gt; choice(deck)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;clubs&apos;)</span><br><span class="line">&gt;&gt;&gt; choice(deck)</span><br><span class="line">Card(rank=&apos;J&apos;, suit=&apos;clubs&apos;)</span><br></pre></td></tr></table></figure>
-<h4 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h4><p>既然我们实现了引索中括号[]操作，那么我们也可以使用切片操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; deck[:3]</span><br><span class="line">[Card(rank=&apos;2&apos;, suit=&apos;spades&apos;), Card(rank=&apos;3&apos;, suit=&apos;spades&apos;), </span><br><span class="line">Card(rank=&apos;4&apos;, suit=&apos;spades&apos;)]</span><br><span class="line">&gt;&gt;&gt; deck[12::13]</span><br><span class="line">[Card(rank=&apos;A&apos;, suit=&apos;spades&apos;), Card(rank=&apos;A&apos;, suit=&apos;hearts&apos;), </span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;clubs&apos;), Card(rank=&apos;A&apos;, suit=&apos;diamonds&apos;)]</span><br></pre></td></tr></table></figure>
-<h4 id="迭代操作"><a href="#迭代操作" class="headerlink" title="迭代操作"></a>迭代操作</h4><p>另外，仅仅实现了<code>__getitem__</code>方法，那么也变成了可迭代的了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for card in deck: # 反向迭代也可以 reversed(deck)</span><br><span class="line">	print(card)</span><br><span class="line"></span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;spades&apos;)</span><br><span class="line">Card(rank=&apos;3&apos;, suit=&apos;spades&apos;)</span><br><span class="line">Card(rank=&apos;4&apos;, suit=&apos;spades&apos;)</span><br><span class="line">···</span><br><span class="line">Card(rank=&apos;Q&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;K&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;diamonds&apos;)</span><br></pre></td></tr></table></figure>
-<h4 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h4><p>如果一个集合没有实现<code>__contains__</code>方法，那么<code>in</code>运算符会按顺序做一次迭代搜索。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Card(&apos;A&apos;, &apos;hearts&apos;) in deck</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; Card(&apos;B&apos;, &apos;hearts&apos;) in deck</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p>按照扑克牌的大小，2最小，A最大，同时要加上花色的大小判定，从大到小排序：黑桃、红桃、梅花、方块。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">suit_values = dict(spades = <span class="number">3</span>, hearts = <span class="number">2</span>, clubs = <span class="number">1</span>, diamonds = <span class="number">0</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">spades_high</span><span class="params">(card)</span>:</span></span><br><span class="line">	rank_value = FrenchDeck.ranks.index (card.rank)</span><br><span class="line">	<span class="keyword">return</span> rank_value * len(suit_values) + suit_values[card.suit]</span><br></pre></td></tr></table></figure>
-<p>运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for card in sorted(deck, key = spades_high):</span><br><span class="line">	print(card)</span><br><span class="line"></span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;clubs&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;hearts&apos;)</span><br><span class="line">Card(rank=&apos;2&apos;, suit=&apos;spades&apos;)</span><br><span class="line">···</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;diamonds&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;clubs&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;hearts&apos;)</span><br><span class="line">Card(rank=&apos;A&apos;, suit=&apos;spades&apos;)</span><br></pre></td></tr></table></figure>
+        <h1 id="对序列使用-和"><a href="#对序列使用-和" class="headerlink" title="对序列使用+和*"></a>对序列使用+和*</h1><p>Python中，可以使用<code>+</code>和<code>*</code>对序列进行拼接，形成一个全新的序列，原序列保持不变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; l = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; l * 3</span><br><span class="line">[1, 2, 3, 1, 2, 3, 1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; 2 * &apos;abc&apos;</span><br><span class="line">&apos;abcabc&apos;</span><br></pre></td></tr></table></figure>
+<p>这个相信很多Python程序员都会很经常用到，但这里面会有一个陷阱，下面一个例子说明一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; my_list = [[&apos;_&apos;] * 3] * 3  # 形成一个3*3的序列</span><br><span class="line">&gt;&gt;&gt; my_list</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;]]</span><br><span class="line">&gt;&gt;&gt; my_list[1][2] = &apos;X&apos;   		# 对序列其中一个元素进行修改</span><br><span class="line">&gt;&gt;&gt; my_list</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;X&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;X&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;X&apos;]]</span><br></pre></td></tr></table></figure>
+<h4 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h4><p>后面的结果和预想的并不一样，不只是 <code>my_list[1][2]</code> 的位置里发生了改变，而是全部 <code>my_list[x][2]</code> 里面都都发生了改变。</p>
+<p>导致这一原因是因为，如果用<code>my_list = [[&#39;_&#39;] * 3] * 3</code>来初始化序列，里面的3个元素都是引用，而不是新的序列。</p>
+<p><strong>注意:</strong> <code>[&#39;_&#39;] * 3</code> 这样单个列表使用<em>是不会出现上面那样的情况的，只有当列表有嵌套的时候，如`[[]] </em> 3`才会发生。</p>
+<p>可以使用下面的例子来解决刚才的问题。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; my_list = [[&apos;_&apos;] * 3 for i in range(3)]   </span><br><span class="line">&gt;&gt;&gt; my_list</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;]]</span><br><span class="line">&gt;&gt;&gt; my_list[1][2] = &apos;X&apos;</span><br><span class="line">&gt;&gt;&gt; my_list</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;X&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;]]</span><br></pre></td></tr></table></figure>
+<h4 id="代码解析-1"><a href="#代码解析-1" class="headerlink" title="代码解析"></a>代码解析</h4><p>主要是在列表初始化的时候，使用列表推导的方式生成一个 3*3 的序列，这样，里面的每一个元素都是一个独立的序列。</p>
+<h2 id="对于错误的理解"><a href="#对于错误的理解" class="headerlink" title="对于错误的理解"></a>对于错误的理解</h2><p>上面提到的那个陷阱，可以用下面的例子明确的展示出来</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">row = [<span class="string">'_'</span>] * <span class="number">3</span></span><br><span class="line">my_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">	my_list.append(row)</span><br></pre></td></tr></table></figure>
+<p>这样看起来就很容易理解上面陷阱的原因了。</p>
+<p>相对于上面<strong>正确</strong>代码用以下的例子明确地展示。</p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">	row = [<span class="string">'_'</span>] * <span class="number">3</span></span><br><span class="line">	my_list.append(row)</span><br></pre></td></tr></table></figure>
+<p>如果对于以上还不理解的话，建议百度找找关于引用类型的说明，如果学过C语言里面的指针的话，也是同一个道理。</p>
+
         
     
 
@@ -526,7 +524,7 @@
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="2018/02/12/特殊方法/"  ></div>
+<div id="SOHUCS" sid="2018/03/03/Python对序列使用-和*/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cytso6Rta';
@@ -550,21 +548,13 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/02/12/Python元组/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/02/08/Markdown语法/" id="post_nav-older" class="next-content">
+        <a href="/2018/02/15/Python列表推导/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
