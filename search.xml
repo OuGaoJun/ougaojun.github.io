@@ -3,6 +3,218 @@
   
     
     <entry>
+      <title><![CDATA[Python获取详细时间：time模块]]></title>
+      <url>/2018/04/27/Python%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E6%97%B6%E9%97%B4%EF%BC%9Atime%E6%A8%A1%E5%9D%97/</url>
+      <content type="html"><![CDATA[<h1 id="Time模块"><a href="#Time模块" class="headerlink" title="Time模块"></a>Time模块</h1><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>关于Python的<code>Time</code>模块的详细的函数功能和介绍可以看这篇文章：</p>
+<p><a href="https://www.cnblogs.com/renpingsheng/p/6965044.html" target="_blank" rel="noopener">https://www.cnblogs.com/renpingsheng/p/6965044.html</a></p>
+<h3 id="计算代码运行时长"><a href="#计算代码运行时长" class="headerlink" title="计算代码运行时长"></a>计算代码运行时长</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回当前时间戳（1970纪元后进过的浮点秒数）</span></span><br><span class="line">start = time.time()</span><br><span class="line"><span class="comment"># 耗时操作</span></span><br><span class="line">[i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">9</span>**<span class="number">8</span>)]</span><br><span class="line"><span class="comment"># 再次获取</span></span><br><span class="line">end = time.time()</span><br><span class="line"><span class="comment"># 总耗时等于后面的时间戳减去前面的</span></span><br><span class="line">print(<span class="string">'总耗时：'</span>, end-start, <span class="string">'秒'</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总耗时： 4.603348016738892 秒</span><br></pre></td></tr></table></figure>
+<h3 id="获取详细的时间信息"><a href="#获取详细的时间信息" class="headerlink" title="获取详细的时间信息"></a>获取详细的时间信息</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以时间元组(struct_time)的形式返回</span></span><br><span class="line">localtime = time.localtime(time.time())</span><br><span class="line"><span class="comment"># 输出元组</span></span><br><span class="line">print(localtime)</span><br><span class="line"><span class="comment"># 取年份</span></span><br><span class="line">print(<span class="string">"当前年份："</span>, localtime[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<h5 id="运行结果：-1"><a href="#运行结果：-1" class="headerlink" title="运行结果："></a>运行结果：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">time.struct_time(tm_year=2018, tm_mon=4, tm_mday=26, tm_hour=10, tm_min=50, tm_sec=24, tm_wday=3, tm_yday=116, tm_isdst=0)</span><br><span class="line">当前年份： 2018</span><br></pre></td></tr></table></figure>
+<h4 id="返回元组的解析"><a href="#返回元组的解析" class="headerlink" title="返回元组的解析"></a>返回元组的解析</h4><table>
+<thead>
+<tr>
+<th>索引值(index)</th>
+<th>属性(Attribute)</th>
+<th>值(Values)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>tm_year(年)</td>
+<td>(例如:2015)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>tm_mon(月)</td>
+<td>1-12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>tm_mday(日)</td>
+<td>1-31</td>
+</tr>
+<tr>
+<td>3</td>
+<td>tm_hour(时)</td>
+<td>0-23</td>
+</tr>
+<tr>
+<td>4</td>
+<td>tm_min(分)</td>
+<td>0-59</td>
+</tr>
+<tr>
+<td>5</td>
+<td>tm_sec(秒)</td>
+<td>0-61(60代表闰秒,61是基于历史原因保留)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>tm_wday(星期几)</td>
+<td>0-6(0表示星期一)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>tm_yday(一年中的第几天)</td>
+<td>1-366</td>
+</tr>
+<tr>
+<td>8</td>
+<td>tm_isdst(是否为夏令时)</td>
+<td>0,1,-1(-1代表夏令时)</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Python数组：array模块]]></title>
+      <url>/2018/04/27/Python%E6%95%B0%E7%BB%84%EF%BC%9Aarray%E6%A8%A1%E5%9D%97/</url>
+      <content type="html"><![CDATA[<h1 id="Python数组"><a href="#Python数组" class="headerlink" title="Python数组"></a>Python数组</h1><h3 id="为什么要用数组"><a href="#为什么要用数组" class="headerlink" title="为什么要用数组"></a>为什么要用数组</h3><p>列表（list）既灵活又简单，但面对各种需求的时候，比如，存放1000万个浮点数的话，数组（array）的效率就比列表高很多。因为数组背后存放的并不是float对象，而是数字的机器翻译，也就是字节表述。就跟C语言的数组一样。</p>
+<h3 id="创建一个数组"><a href="#创建一个数组" class="headerlink" title="创建一个数组"></a>创建一个数组</h3><p>导入Python自带的<code>array</code>模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> array <span class="keyword">import</span> array</span><br></pre></td></tr></table></figure>
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个整数数组</span></span><br><span class="line">a = array(<span class="string">'i'</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"><span class="comment"># a是一个数组对象</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以像列表一样使用数组</span></span><br><span class="line">print(<span class="string">'第二个元素'</span>, a[<span class="number">2</span>])</span><br><span class="line">print(<span class="string">'遍历输出数组:'</span>)</span><br><span class="line">[print(element) <span class="keyword">for</span> element <span class="keyword">in</span> a]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 能直接转成列表对象</span></span><br><span class="line">print(list(a))</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array(&apos;i&apos;, [1, 2, 3])</span><br><span class="line">第二个元素 3</span><br><span class="line">遍历输出数组:</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">[1, 2, 3]</span><br></pre></td></tr></table></figure>
+<h3 id="数组创建的类型"><a href="#数组创建的类型" class="headerlink" title="数组创建的类型"></a>数组创建的类型</h3><p>由上面的例子可以看出，创建数组就是执行了这条代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = array(<span class="string">'i'</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>第一个参数是<code>Typecode</code>，例如这里参数的<code>&#39;i&#39;</code>决定了数组元素的类型为整数。以下是Python数组所有的类型（Python3.6）：</p>
+<table>
+<thead>
+<tr>
+<th>Type code</th>
+<th>C Type</th>
+<th>Python Type</th>
+<th>Minimum size in bytes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&#39;b&#39;</code></td>
+<td>signed char</td>
+<td>int</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>&#39;B&#39;</code></td>
+<td>unsigned char</td>
+<td>int</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>&#39;u&#39;</code></td>
+<td>Py_UNICODE</td>
+<td>Unicode character</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>&#39;h&#39;</code></td>
+<td>signed short</td>
+<td>int</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>&#39;H&#39;</code></td>
+<td>unsigned short</td>
+<td>int</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>&#39;i&#39;</code></td>
+<td>signed int</td>
+<td>int</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>&#39;I&#39;</code></td>
+<td>unsigned int</td>
+<td>int</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>&#39;l&#39;</code></td>
+<td>signed long</td>
+<td>int</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>&#39;L&#39;</code></td>
+<td>unsigned long</td>
+<td>int</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>&#39;q&#39;</code></td>
+<td>signed long long</td>
+<td>int</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>&#39;Q&#39;</code></td>
+<td>unsigned long long</td>
+<td>int</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>&#39;f&#39;</code></td>
+<td>float</td>
+<td>float</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>&#39;d&#39;</code></td>
+<td>double</td>
+<td>float</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="array的方法"><a href="#array的方法" class="headerlink" title="array的方法"></a>array的方法</h3><p>详细看：</p>
+<p><a href="https://docs.python.org/3.6/library/array.html" target="_blank" rel="noopener">https://docs.python.org/3.6/library/array.html</a></p>
+<p>有需求我再补充这部分。</p>
+<h3 id="tofile和fromfile方法"><a href="#tofile和fromfile方法" class="headerlink" title="tofile和fromfile方法"></a>tofile和fromfile方法</h3><p>这两个方法是<code>array</code>自带的序列化方法，可以将对象写到一个二进制文件，也可以通过读取这个二进制文件获取里面的<code>array</code>对象。而且速度非常快。</p>
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> array <span class="keyword">import</span> array</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成一千万个随机数</span></span><br><span class="line">floats = array(<span class="string">'d'</span>, [random() <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>**<span class="number">7</span>)])</span><br><span class="line"><span class="comment"># 输出最后一个数</span></span><br><span class="line">print(floats[<span class="number">-1</span>])</span><br><span class="line"><span class="comment"># 将对象写到二进制文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./floats.bin'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> file:</span><br><span class="line">    floats.tofile(file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个空的数组对象</span></span><br><span class="line">floats2 = array(<span class="string">'d'</span>)</span><br><span class="line"><span class="comment"># 读取二进制文件的array对象</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./floats.bin'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> file:</span><br><span class="line">    floats2.fromfile(file, <span class="number">10</span>**<span class="number">7</span>)</span><br><span class="line"><span class="comment"># 输出读取到的对象最后一个元素</span></span><br><span class="line">print(floats2[<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断两个对象元素是否相等</span></span><br><span class="line">print(floats == floats2)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0.87578592028721</span><br><span class="line">0.87578592028721</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<p>这里从文件读取对象只需要0.1秒的时间，比从文本文件读取的速度要快60倍。</p>
+<p>另外还可以用<code>pickle</code>模块进行序列化，速度几乎和上面例子差不多，但是它可以处理任何对象的序列化。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python序列的增量赋值运算]]></title>
       <url>/2018/03/04/Python%E5%BA%8F%E5%88%97%E7%9A%84%E5%A2%9E%E9%87%8F%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97/</url>
       <content type="html"><![CDATA[<h1 id="Python序列的增量赋值"><a href="#Python序列的增量赋值" class="headerlink" title="Python序列的增量赋值"></a>Python序列的增量赋值</h1><p>Python增量赋值运算符有<code>+=</code>和<code>*=</code>，他们背后的原理就是使用了特殊方法。</p>
